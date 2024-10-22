@@ -1,0 +1,52 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.footer {
+    height: 100px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .navi {
+        ul {
+            li {
+                &:hover {
+                    color: var(--secondary-color);
+                }
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 50px;
+
+        li {
+            a {
+
+                .X,
+                .IG,
+                .TG,
+                .ML,
+                .PN {
+                    &:hover {
+                        color: var(--secondary-color);
+                        transform: scale(1.25);
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        margin-bottom: 20px;
+        ul {
+            gap: 25px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

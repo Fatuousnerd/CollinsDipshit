@@ -1,0 +1,50 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.navbar {
+    margin: 0 auto;
+    backdrop-filter: blur(50px);
+    border-bottom: 1.5px solid #fff;
+    // max-width: 80vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px 50px;
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    left: 0;
+
+    .logo {
+        height: 100%;
+        width: 50px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .navi {
+        ul {
+            display: flex;
+            gap: 25px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+
+            li {
+                a {
+                    &:hover {
+                        color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        display: none;
+    }
+}

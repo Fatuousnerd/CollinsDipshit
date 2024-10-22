@@ -1,0 +1,61 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.testimonials {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 50px;
+    text-align: center;
+    // border: 1px solid #fff;
+
+    .title {
+        text-transform: uppercase;
+    }
+
+    .wrappers {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 20px 100px;
+        // background: cadetblue;
+
+        .wrap {
+            width: 350px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            // .top{
+            //     p{
+            //     }
+            // }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+
+                .fqt {
+                    transform: scale(1.25);
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        min-height: 100vh;
+        height: auto;
+
+        .wrappers {
+            flex-direction: column;
+            padding: 0 50px;
+            .wrap{
+                margin: 0 20px;
+            }
+        }
+    }
+}

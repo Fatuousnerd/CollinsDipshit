@@ -1,0 +1,29 @@
+@import '../../../app.scss';
+@import '../../../variables.scss';
+
+.carousel {
+    background: var(--secondary-color);
+
+    .content {
+        height: 100vh;
+        width: 100vw;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include mobile {
+        max-width: 100vw !important;
+
+        .content {
+            max-width: 100vw;
+
+            img {
+                max-width: 100vw;
+            }
+        }
+    }
+}

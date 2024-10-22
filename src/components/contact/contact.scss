@@ -1,0 +1,142 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.contact {
+    height: 100vh;
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 2rem;
+    }
+
+    .wrap {
+        display: flex;
+        gap: 100px;
+        // background: gold;
+        padding: 50px 70px;
+
+        .fm {
+            flex: 1;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .tp {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+                    // background: red;
+
+                    .inp {
+                        // background: cadetblue;
+                        width: 50%;
+                        display: flex;
+                        gap: 5px;
+                        flex-direction: column;
+
+                        input {
+                            padding: 5px;
+                            border: none;
+                            outline: none;
+                            border-radius: 5px;
+                            background: var(--secondary-color);
+                            color: var(--text-color);
+
+                            &::placeholder {
+                                color: var(--text-color);
+                            }
+                        }
+                    }
+                }
+
+                .bm {
+                    display: flex;
+                    flex-direction: column;
+
+                    textarea {
+                        padding: 5px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        background: var(--secondary-color);
+                        color: var(--text-color);
+
+                        &::placeholder {
+                            color: var(--text-color);
+                        }
+                    }
+                }
+
+                small {
+                    text-align: center;
+                }
+            }
+        }
+
+        .ico {
+            display: flex;
+            align-items: center;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                li {
+
+                    .X,
+                    .IG,
+                    .TG,
+                    .ML,
+                    .PN {
+                        &:hover {
+                            transform: scale(1.25);
+                            transition: all ease-in .25s;
+                            color: var(--secondary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        .head {
+            font-size: 1.5rem;
+        }
+
+        .wrap {
+            flex-direction: column;
+            padding: 0 30px;
+            margin-top:70px;
+
+            .fm {
+                // background: red;
+
+                form {
+                    .tp {
+                        gap: 5px;
+
+                        .inp {
+                            width: 48%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ico {
+            ul {
+                flex-direction: row !important;
+                gap: 45px !important;
+            }
+        }
+    }
+}

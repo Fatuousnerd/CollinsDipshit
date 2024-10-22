@@ -1,0 +1,108 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.about {
+    height: 100vh;
+    position: relative;
+    top: 100px;
+    display: flex;
+    padding: 20px;
+    overflow-y: hidden;
+
+    .texts {
+        // background: cadetblue;
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .title {
+            h1 {
+                font-size: 5rem;
+                text-transform: uppercase;
+                color: var(--secondary-color);
+            }
+        }
+
+        .desc {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            p {
+                font-size: 1.15rem;
+            }
+
+            button {
+                background: var(--secondary-color);
+                padding: 10px;
+                border-radius: 1px;
+                text-transform: uppercase;
+                transition: all .25s ease;
+
+                &:hover {
+                    color: unset;
+                    transform: scale(1.05);
+                    transition: all .25s ease;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 50px;
+
+            li {
+                a {
+
+                    .X,
+                    .IG,
+                    .TG,
+                    .ML,
+                    .PN {
+                        &:hover {
+                            color: var(--secondary-color);
+                            transform: scale(1.25);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pic {
+        flex: 1;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        // background: linear-gradient(80deg, transparent 25%, rgba(121, 85, 72, .75) 50%, rgba(62, 39, 35, 0.25) 85%), url('./hero.png');
+        // background-size: cover;
+        // background-position: center;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        top: 0;
+        padding: 10px;
+        height: auto;
+
+        .texts {
+            .title {
+                h1 {
+                    font-weight: 900;
+                }
+            }
+
+            .social {
+                ul {
+                    gap: 45px;
+                }
+            }
+        }
+
+        .pic {
+            display: none;
+        }
+    }
+}

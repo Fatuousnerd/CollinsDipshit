@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+button{
+    right: 10vw;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    box-shadow: unset !important;
+    cursor: pointer;
+
+    &:hover{
+        color: var(--secondary-color);
+    }
+}

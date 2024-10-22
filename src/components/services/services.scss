@@ -1,0 +1,124 @@
+@import '../../app.scss';
+@import '../../variables.scss';
+
+.services {
+    min-height: 100vh;
+    display: flex;
+    padding: 50px 0;
+    overflow-y: hidden;
+
+    .containers {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 20px 40px 0 25px;
+
+        .container {
+            background: var(--secondary-color);
+            width: 800px;
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            transition: all .25s ease-in-out;
+
+            .txt {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                button {
+                    background: var(--main-color);
+                    padding: 5px 50px;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .open {
+            background: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            height: 600px;
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            transition: all .25s ease-in-out;
+
+            .close {
+                position: absolute;
+
+                &:hover {
+                    color: unset;
+                }
+            }
+
+            .txt {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                button {
+                    background: var(--main-color);
+                    padding: 5px 50px;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    .info {
+        padding-right: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3 {
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        button {
+            background: var(--secondary-color);
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: 900;
+
+            &:hover {
+                color: unset;
+            }
+        }
+    }
+
+    @include mobile {
+        padding: 0;
+        flex-direction: column;
+
+        .containers {
+            padding: 0 20px;
+        }
+
+        .info {
+            padding: 30px;
+        }
+    }
+}
